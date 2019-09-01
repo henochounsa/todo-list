@@ -1,0 +1,11 @@
+.todo-card {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(236, 236, 236);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  overflow: scroll;
+}

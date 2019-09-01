@@ -1,0 +1,15 @@
+svg {
+    enable-background: new 0 0 249.425 249.425;
+}
+
+.btn-validate {
+    width: 20px;
+    height: 2Opx;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.btn-validate:hover {
+    width: 22px;
+    height: 22px;
+}

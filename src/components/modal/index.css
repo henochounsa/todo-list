@@ -1,0 +1,56 @@
+.modal {
+  position: fixed;
+  align-self: flex-end;
+  margin-left: 20px;
+  width: 400px;
+  height: 50px;
+  z-index: 100px;
+}
+
+.modal-main {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+.modal-main input {
+  width: 80%;
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid #c5c2d1;
+  background-color: white;
+}
+
+.modal-main input:focus {
+  outline: none;
+}
+
+.modal-main button {
+  width: 20%;
+  text-align: center;
+  border: none;
+  font-size: 25px;
+  color: white;
+  background-color: #c5c2d1;
+  border: 1px solid #c5c2d1;
+  outline: none;
+  cursor: pointer;
+}
+
+.modal-main button:active {
+  background-color: #a7a4b6e5;
+  transform: translateY(-1px);
+}
+
+.modal-main button:hover {
+  background-color: #a7a4b6e5;
+}
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
