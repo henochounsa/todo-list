@@ -2,6 +2,7 @@
 
 
 ![ TODO IMAGE ](./src/assets/add-todo.png)
+<br><br><br>
 ![ TODO IMAGE ](./src/assets/todo-toggle.png)
 
 Install all dependencies of the todo list project 
