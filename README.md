@@ -1,7 +1,10 @@
 
-Install all dependencies of the todo list project 
+
 
 ![ TODO IMAGE ](./src/assets/add-todo.png)
+![ TODO IMAGE ](./src/assets/todo-toggle.png)
+
+Install all dependencies of the todo list project 
 
 ### `npm Install`
 
