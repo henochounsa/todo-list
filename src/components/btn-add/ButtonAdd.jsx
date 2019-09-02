@@ -7,7 +7,7 @@ const ButtonAdd = props => {
   return (
       <div className="btn-add" onClick= { props.action }>
           <span>
-        +
+             +
           </span>
       </div>
   )

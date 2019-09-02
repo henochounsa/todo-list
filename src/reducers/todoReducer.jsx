@@ -1,5 +1,7 @@
 /* eslint-disable camelcase */
+
 import { ADD_TODO, TOGGLE_TODO, DELETE_TODO, UPDATE_TODO, DELETE_ALL_TODO } from '../constants'
+
 const initial_state = [
     {
         id: 1,
