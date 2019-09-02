@@ -9,11 +9,11 @@ import './App.css';
 
 function App() {
   return (
-    <Provider store={store}>
-      <div className="App">
-        <TodoApp />
-      </div>
-    </Provider>
+      <Provider store={ store }>
+          <div className="App">
+              <TodoApp />
+          </div>
+      </Provider>
   );
 }
 

@@ -1,4 +1,3 @@
-
 import React from 'react'
 import PropTypes from 'prop-types'
 import './index.css'
@@ -6,14 +5,13 @@ import './index.css'
 const ButtonAdd = props => {
 
   return (
-    <div className="btn-add" onClick={props.action}>
-      <span>
+      <div className="btn-add" onClick= { props.action }>
+          <span>
         +
-           </span>
-    </div>
+          </span>
+      </div>
   )
 }
-
 
 ButtonAdd.propTypes = {
   action: PropTypes.func

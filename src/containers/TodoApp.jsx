@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
@@ -9,8 +10,6 @@ import './index.css'
 import { addTodo, toggleTodo, deleteTodo, updateTodo, deleteAllTodo } from '../actions/todo'
 
 class TodoApp extends Component {
-
-    // eslint-disable-next-line no-useless-constructor
     constructor(props) {
         super(props);
 
@@ -23,8 +22,6 @@ class TodoApp extends Component {
             isEditing: null
         }
     }
-
-
     toggleModal = () => this.setState({ showModal: !this.state.showModal, value: '' })
 
     hideModal = () => this.setState({ showModal: false })
@@ -36,7 +33,7 @@ class TodoApp extends Component {
     handleAddTodo = () => {
 
         if (this.state.value !== '') {
-            let todo = {
+            const todo = {
                 id: this.props.todos.length + 1,
                 title: this.state.value,
             }
@@ -62,7 +59,7 @@ class TodoApp extends Component {
     }
 
     handleValidateUpdate = (id) => {
-        let update_data = {
+        const update_data = {
             id: id,
             title: this.state.value
         }
@@ -89,46 +86,46 @@ class TodoApp extends Component {
             <div className="container">
                 <div className="header">
                     <div
-                        onClick={() => this.filter('all')}
-                        className={all_item_class}>
+                        onClick={ () => this.filter('all') }
+                        className={ all_item_class }>
                         Toutes
                     </div>
                     <div
-                        onClick={() => this.filter('end')}
-                        className={end_item_class}>
+                        onClick={ () => this.filter('end') }
+                        className={ end_item_class }>
                         Terminées
                     </div>
                     <div
-                        onClick={() => this.filter('progress')}
-                        className={progress_item_class}>
+                        onClick={ () => this.filter('progress') }
+                        className={ progress_item_class }>
                         En cours
                     </div>
 
                     <div
-                        onClick={() => this.handleDeleteAllTodo('delete_all')}
+                        onClick={ () => this.handleDeleteAllTodo('delete_all') }
                         className="delete-all">
                         Supprimer tout
                     </div>
                 </div>
                 <div className="card">
                     <Todo
-                        handleToggleTodo={this.handleToggleTodo}
-                        handleDeleteTodo={this.handleDeleteTodo}
-                        handleUpdate={this.handleUpdate}
-                        handleValidateUpdate={this.handleValidateUpdate}
-                        isDisable={this.state.isDisable}
-                        value={this.state.value}
-                        isEditing={this.state.isEditing}
-                        handleEditTodo={this.handleEditTodo}
-                        todos={filteredTodo}
+                        handleToggleTodo={ this.handleToggleTodo }
+                        handleDeleteTodo={ this.handleDeleteTodo }
+                        handleUpdate={ this.handleUpdate }
+                        handleValidateUpdate={ this.handleValidateUpdate }
+                        isDisable={ this.state.isDisable }
+                        value={ this.state.value }
+                        isEditing={ this.state.isEditing }
+                        handleEditTodo={ this.handleEditTodo }
+                        todos={ filteredTodo }
                     />
                     <Modal
-                        value={this.state.value}
-                        handleUpdate={this.handleUpdate}
-                        show={this.state.showModal}
-                        handleAddTodo={this.handleAddTodo}
+                        value={ this.state.value }
+                        handleUpdate={ this.handleUpdate }
+                        show={ this.state.showModal }
+                        handleAddTodo={ this.handleAddTodo }
                     />
-                    <ButtonAdd action={this.toggleModal} />
+                    <ButtonAdd action={ this.toggleModal } />
                 </div>
             </div>
         )
@@ -141,7 +138,9 @@ TodoApp.propTypes = {
     toggleTodo: PropTypes.func,
     deleteTodo: PropTypes.func,
     progressTodo: PropTypes.func,
-    endedTodo: PropTypes.func
+    endedTodo: PropTypes.func,
+    deleteAllTodo: PropTypes.func,
+    updateTodo: PropTypes.func
 }
 
 const mapStateToProps = state => ({

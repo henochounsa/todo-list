@@ -1,11 +1,9 @@
-
+/* eslint-disable camelcase */
 import { ADD_TODO, TOGGLE_TODO, DELETE_TODO, UPDATE_TODO, DELETE_ALL_TODO } from '../constants'
-
-
 const initial_state = [
     {
         id: 1,
-        title: "Programmer une todo",
+        title: 'Programmer une todo',
         created_at: 1567322133316,
         completed: false,
     }

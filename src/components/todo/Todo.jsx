@@ -11,16 +11,16 @@ const Todo = ({ todos, handleToggleTodo, handleDeleteTodo, handleUpdate, handleV
             {
                 todos.map((todo, index) => (
                     <TodoItem
-                        toggleTodo={() => handleToggleTodo(todo.id)}
-                        deleteTodo={() => handleDeleteTodo(todo.id)}
-                        todo={todo}
-                        handleValidateUpdate={() => handleValidateUpdate(todo.id)}
-                        value={value}
-                        isDisable={isDisable}
-                        handleEditTodo={handleEditTodo}
-                        handleUpdate={handleUpdate}
-                        key={todo.id}
-                        isEditing={isEditing}
+                        toggleTodo={ () => handleToggleTodo(todo.id) }
+                        deleteTodo={ () => handleDeleteTodo(todo.id) }
+                        todo={ todo }
+                        handleValidateUpdate={ () => handleValidateUpdate(todo.id) }
+                        value={ value }
+                        isDisable={ isDisable }
+                        handleEditTodo={ handleEditTodo }
+                        handleUpdate={ handleUpdate }
+                        key={ todo.id }
+                        isEditing={ isEditing }
                     />
                 ))
             }

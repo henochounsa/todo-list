@@ -1,12 +1,13 @@
-import React from "react";
+import React from 'react';
 import Proptypes from 'prop-types'
 
 import './index.css'
 
+// eslint-disable-next-line camelcase
 const BtnEdit = ({ handleEditTodo, toggleEditable, todo_text, todo_id }) => {
     return (
         <svg
-            onClick={() => handleEditTodo(todo_text, todo_id)}
+            onClick={ () => handleEditTodo(todo_text, todo_id) }
             viewBox="0 -1 401.52289 401"
             className="btn-edit"
         >
@@ -18,7 +19,9 @@ const BtnEdit = ({ handleEditTodo, toggleEditable, todo_text, todo_id }) => {
 BtnEdit.propTypes = {
     handleEditTodo: Proptypes.func,
     toggleEditable: Proptypes.func,
+    // eslint-disable-next-line camelcase
     todo_text: Proptypes.string,
+    // eslint-disable-next-line camelcase
     todo_id: Proptypes.number
 }
 export default BtnEdit;
